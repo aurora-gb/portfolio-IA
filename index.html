@@ -1,0 +1,1528 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      Aurora García Bermejo — Brand &amp; Visual Designer, UX/UI and Frontend
+      Development
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Aurora García Bermejo, a Madrid-based brand and visual designer working across visual identity, UX/UI design and frontend development with HTML, CSS, JavaScript and React."
+    />
+    <meta name="author" content="Aurora García Bermejo" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f4f3ef" />
+
+    <!-- TODO (when the public domain is known — GitHub Pages or Vercel):
+       <link rel="canonical" href="https://YOUR-DOMAIN/">
+       <meta property="og:url" content="https://YOUR-DOMAIN/">
+       <meta property="og:image" content="https://YOUR-DOMAIN/img/og-image.jpg">  (1200×630) -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Aurora García Bermejo" />
+    <meta
+      property="og:title"
+      content="Aurora García Bermejo — Brand &amp; Visual Designer, UX/UI and Frontend Development"
+    />
+    <meta
+      property="og:description"
+      content="Brand thinking, visual design and user experience, brought together in thoughtful digital interfaces. Based in Madrid, Spain."
+    />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="profile:first_name" content="Aurora" />
+    <meta property="profile:last_name" content="García Bermejo" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Set the colour mode before first paint to avoid a flash of the wrong theme -->
+    <script>
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch (e) {}
+        var theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.setAttribute("data-bs-theme", theme);
+        document.documentElement.classList.add("js");
+      })();
+    </script>
+
+    <!-- Archivo variable font: width (62–125) and weight (100–900) axes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap v5.3.8 (latest stable), compiled files from the official GitHub release -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aurora García Bermejo",
+        "givenName": "Aurora",
+        "familyName": "García Bermejo",
+        "jobTitle": "Brand & Visual Designer",
+        "description": "Brand and visual designer working across visual identity, UX/UI design and frontend development.",
+        "email": "mailto:auroragbfl@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Madrid",
+          "addressCountry": "ES"
+        },
+        "worksFor": { "@type": "Organization", "name": "Auxadi" },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad Rey Juan Carlos"
+          },
+          { "@type": "EducationalOrganization", "name": "Neoland" }
+        ],
+        "knowsLanguage": ["es", "en"],
+        "knowsAbout": [
+          "Brand identity",
+          "Visual design",
+          "Editorial design",
+          "User experience design",
+          "UX prototyping",
+          "Responsive web design",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Web accessibility"
+        ],
+        "sameAs": ["https://www.linkedin.com/in/aurora-garcia-bermejo/"]
+      }
+    </script>
+  </head>
+
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#site-nav"
+    data-bs-root-margin="0px 0px -55%"
+  >
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ Header / navigation ============ -->
+    <header class="site-header" id="site-header">
+      <nav class="navbar navbar-expand-md" id="site-nav" aria-label="Main">
+        <div class="container-xxl">
+          <a
+            class="wordmark"
+            href="#home"
+            aria-label="Aurora García Bermejo, back to top"
+          >
+            <span class="wordmark__full">Aurora García</span
+            ><span class="wordmark__dot" aria-hidden="true"></span>
+          </a>
+
+          <div class="d-flex align-items-center gap-2 order-md-last">
+            <button
+              class="theme-toggle"
+              type="button"
+              id="theme-toggle"
+              aria-pressed="false"
+            >
+              <span class="visually-hidden" data-theme-label
+                >Switch to dark mode</span
+              >
+              <svg
+                class="theme-toggle__icon theme-toggle__icon--moon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                class="theme-toggle__icon theme-toggle__icon--sun"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4.2"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+                <path
+                  d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+
+            <button
+              class="navbar-toggler menu-toggle"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#nav-links"
+              aria-controls="nav-links"
+              aria-expanded="false"
+            >
+              <span class="menu-toggle__open">Menu</span
+              ><span class="menu-toggle__close">Close</span>
+            </button>
+          </div>
+
+          <div
+            class="collapse navbar-collapse justify-content-md-end"
+            id="nav-links"
+          >
+            <ul class="navbar-nav nav-links">
+              <li class="nav-item">
+                <a class="nav-link" href="#home"
+                  ><span class="nav-index" aria-hidden="true">00</span>Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects"
+                  ><span class="nav-index" aria-hidden="true">01</span
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about"
+                  ><span class="nav-index" aria-hidden="true">02</span>About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact"
+                  ><span class="nav-index" aria-hidden="true">03</span
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ============ Home ============ -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="grid-lines" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="container-xxl position-relative">
+          <dl class="meta-strip reveal">
+            <div>
+              <dt>Discipline</dt>
+              <dd>Brand &amp; Visual Design, UX/UI, Frontend</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Madrid, Spain</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>
+                <span class="status-dot" aria-hidden="true"></span>Open to new
+                opportunities
+              </dd>
+            </div>
+          </dl>
+
+          <h1 class="hero__name" id="hero-title" data-fit>
+            <span class="hero__line">Aurora</span>
+            <span class="hero__line"
+              >García <span class="hero__light">Bermejo</span></span
+            >
+          </h1>
+
+          <div class="row g-4 g-lg-5 hero__body">
+            <div class="col-12 col-lg-7 order-2 order-lg-1">
+              <p class="hero__role reveal">
+                Brand &amp; Visual Designer
+                <span aria-hidden="true">/</span> UX/UI
+                <span aria-hidden="true">/</span> Frontend Development
+              </p>
+
+              <p class="statement reveal">
+                <span class="statement__thin"
+                  >I bring brand thinking, visual design and user experience
+                  together</span
+                >
+                <span class="statement__bold"
+                  >to build thoughtful digital interfaces.</span
+                >
+              </p>
+
+              <p class="hero__intro reveal">
+                For about four years I have designed corporate identities,
+                editorial pieces and digital communication. Today I am taking
+                that same attention to systems and detail into code, designing
+                interfaces in Figma and building them with HTML, CSS, JavaScript
+                and React.
+              </p>
+
+              <div class="hero__actions reveal">
+                <a class="btn btn-accent" href="#projects"
+                  >Explore My Work
+                  <span class="btn__arrow" aria-hidden="true">↓</span></a
+                >
+                <a class="btn btn-line" href="#contact">Get in Touch</a>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-8 col-md-6 col-lg-4 offset-lg-1 order-1 order-lg-2"
+            >
+              <figure class="portrait reveal">
+                <img
+                  src="img/profile/Gemini_Generated_Image_pyj7rypyj7rypyj7_768x768.jpeg"
+                  width="768"
+                  height="768"
+                  alt="Black and white portrait of Aurora García Bermejo, with long wavy hair and a dark blazer, looking towards the camera."
+                  fetchpriority="high"
+                  decoding="async"
+                />
+                <figcaption>
+                  <span>Fig. 01</span> Aurora García Bermejo, Madrid
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <ol class="index-strip reveal" aria-label="Areas of practice">
+            <li><span>01</span>Brand Identity</li>
+            <li><span>02</span>Visual &amp; Editorial Design</li>
+            <li><span>03</span>UX/UI &amp; Prototyping</li>
+            <li><span>04</span>Frontend Development</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ Projects ============ -->
+      <section
+        class="section section--projects"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="container-xxl">
+          <header class="section-head">
+            <p class="eyebrow"><span>(01)</span> Selected work</p>
+            <h2 class="section-title" id="projects-title" data-fit>Projects</h2>
+            <p class="section-intro">
+              Brand systems, event identity, UX prototyping, editorial design
+              and the first project built entirely in code. Select a project to
+              read the case study.
+            </p>
+          </header>
+
+          <p class="notice reveal" role="note">
+            <strong>Work in progress.</strong> The images in this section are
+            placeholder photographs from Unsplash, not my own work. They will be
+            replaced with real project material.
+          </p>
+
+          <ol class="project-list">
+            <li class="project-row reveal">
+              <span class="project-row__num">01</span>
+              <div class="project-row__text">
+                <h3 class="project-row__title">
+                  <button
+                    type="button"
+                    class="project-row__trigger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#case-01"
+                  >
+                    Corporate Visual Identity System
+                  </button>
+                </h3>
+                <p class="project-row__meta">
+                  Brand identity · Auxadi · 2025–present
+                </p>
+              </div>
+              <div class="project-row__media">
+                <img
+                  src="https://images.unsplash.com/photo-1658863025658-4a259cc68fc9?auto=format&amp;fit=crop&amp;q=70&amp;w=640&amp;h=420"
+                  width="640"
+                  height="420"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Placeholder: design books and paper brochure samples arranged on a white surface."
+                />
+              </div>
+              <span class="project-row__cta" aria-hidden="true"
+                >View case ↗</span
+              >
+            </li>
+
+            <li class="project-row reveal">
+              <span class="project-row__num">02</span>
+              <div class="project-row__text">
+                <h3 class="project-row__title">
+                  <button
+                    type="button"
+                    class="project-row__trigger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#case-02"
+                  >
+                    LATAM Days Madrid 2026
+                  </button>
+                </h3>
+                <p class="project-row__meta">
+                  Event identity &amp; communication · 2026
+                </p>
+              </div>
+              <div class="project-row__media">
+                <img
+                  src="https://images.unsplash.com/photo-1773828755374-0ee802d9f44b?auto=format&amp;fit=crop&amp;q=70&amp;w=640&amp;h=420"
+                  width="640"
+                  height="420"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Placeholder: speaker presenting to a large audience in an auditorium."
+                />
+              </div>
+              <span class="project-row__cta" aria-hidden="true"
+                >View case ↗</span
+              >
+            </li>
+
+            <li class="project-row reveal">
+              <span class="project-row__num">03</span>
+              <div class="project-row__text">
+                <h3 class="project-row__title">
+                  <button
+                    type="button"
+                    class="project-row__trigger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#case-03"
+                  >
+                    Internal Reservation Platform
+                  </button>
+                </h3>
+                <p class="project-row__meta">
+                  UX prototyping · Auxadi · 2025–present
+                </p>
+              </div>
+              <div class="project-row__media">
+                <img
+                  src="https://images.unsplash.com/photo-1790861286837-3580e5c91683?auto=format&amp;fit=crop&amp;q=70&amp;w=640&amp;h=420"
+                  width="640"
+                  height="420"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Placeholder: hand-drawn website wireframes on dot-grid paper with a pencil."
+                />
+              </div>
+              <span class="project-row__cta" aria-hidden="true"
+                >View case ↗</span
+              >
+            </li>
+
+            <li class="project-row reveal">
+              <span class="project-row__num">04</span>
+              <div class="project-row__text">
+                <h3 class="project-row__title">
+                  <button
+                    type="button"
+                    class="project-row__trigger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#case-04"
+                  >
+                    Editorial Design &amp; Infographics
+                  </button>
+                </h3>
+                <p class="project-row__meta">
+                  Editorial · Elzaburu · 2022–2024
+                </p>
+              </div>
+              <div class="project-row__media">
+                <img
+                  src="https://images.unsplash.com/photo-1579366877909-40560cf603e2?auto=format&amp;fit=crop&amp;q=70&amp;w=640&amp;h=420"
+                  width="640"
+                  height="420"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Placeholder: a pile of printed magazines on a table."
+                />
+              </div>
+              <span class="project-row__cta" aria-hidden="true"
+                >View case ↗</span
+              >
+            </li>
+
+            <li class="project-row reveal">
+              <span class="project-row__num">05</span>
+              <div class="project-row__text">
+                <h3 class="project-row__title">
+                  <button
+                    type="button"
+                    class="project-row__trigger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#case-05"
+                  >
+                    This Portfolio
+                  </button>
+                </h3>
+                <p class="project-row__meta">
+                  Design &amp; frontend development · Personal · 2026
+                </p>
+              </div>
+              <div class="project-row__media">
+                <img
+                  src="https://images.unsplash.com/photo-1555066931-bf19f8fd1085?auto=format&amp;fit=crop&amp;q=70&amp;w=640&amp;h=420"
+                  width="640"
+                  height="420"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Placeholder: laptop on a desk displaying lines of code."
+                />
+              </div>
+              <span class="project-row__cta" aria-hidden="true"
+                >View case ↗</span
+              >
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ About ============ -->
+      <section
+        class="section section--about"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="container-xxl">
+          <header class="section-head">
+            <p class="eyebrow"><span>(02)</span> Profile</p>
+            <h2 class="section-title" id="about-title" data-fit>About</h2>
+          </header>
+
+          <div class="row g-4 g-lg-5">
+            <div class="col-12 col-lg-5">
+              <p class="pull-quote reveal">
+                <span class="statement__thin"
+                  >A brand system is an interface</span
+                >
+                <span class="statement__bold">waiting to be built.</span>
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-6 offset-lg-1 about-copy reveal">
+              <p>
+                I'm Aurora, a brand and visual designer based in Madrid with
+                around four years of experience in corporate identity, digital
+                communication, editorial design and audiovisual content.
+              </p>
+              <p>
+                Building brand guidelines taught me that consistency is a form
+                of usability: a clear system helps people find their way,
+                whether on a printed report or on a screen. Working on UX
+                prototypes for an internal reservation platform alongside a
+                development team made me want to understand the other side of
+                the handoff.
+              </p>
+              <p>
+                In 2026 I completed the Full-Stack Web Development Bootcamp at
+                Neoland. I now design and build interfaces where visual systems,
+                usability and implementation are considered together, and I'm
+                looking for roles in frontend development, UI engineering and
+                UX/UI design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Capabilities -->
+          <div class="subsection">
+            <h3 class="subsection-title">Capabilities</h3>
+            <div class="accordion capabilities" id="capabilities">
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cap-1"
+                    aria-expanded="false"
+                    aria-controls="cap-1"
+                  >
+                    <span class="cap-num">01</span>Brand &amp; Visual Design
+                  </button>
+                </h4>
+                <div
+                  id="cap-1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#capabilities"
+                >
+                  <div class="accordion-body">
+                    <ul class="tag-list">
+                      <li>Corporate visual identity</li>
+                      <li>Brand guidelines &amp; identity systems</li>
+                      <li>Editorial design &amp; publications</li>
+                      <li>Infographics &amp; iconography</li>
+                      <li>Advertising, banners &amp; email marketing</li>
+                      <li>Print, events &amp; merchandising</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cap-2"
+                    aria-expanded="false"
+                    aria-controls="cap-2"
+                  >
+                    <span class="cap-num">02</span>UX/UI &amp; Product Design
+                  </button>
+                </h4>
+                <div
+                  id="cap-2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#capabilities"
+                >
+                  <div class="accordion-body">
+                    <ul class="tag-list">
+                      <li>UX prototyping</li>
+                      <li>Interface design in Figma</li>
+                      <li>Design systems</li>
+                      <li>Responsive web design</li>
+                      <li>Collaboration with development teams</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cap-3"
+                    aria-expanded="false"
+                    aria-controls="cap-3"
+                  >
+                    <span class="cap-num">03</span>Frontend Development
+                  </button>
+                </h4>
+                <div
+                  id="cap-3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#capabilities"
+                >
+                  <div class="accordion-body">
+                    <ul class="tag-list">
+                      <li>HTML5 &amp; semantic markup</li>
+                      <li>CSS3 &amp; responsive layouts</li>
+                      <li>JavaScript &amp; the DOM</li>
+                      <li>TypeScript</li>
+                      <li>React &amp; Next.js</li>
+                      <li>Web accessibility &amp; technical SEO</li>
+                      <li>Git &amp; GitHub</li>
+                    </ul>
+                    <p class="cap-note">
+                      Learned through the Neoland Full-Stack Web Development
+                      Bootcamp (2026).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cap-4"
+                    aria-expanded="false"
+                    aria-controls="cap-4"
+                  >
+                    <span class="cap-num">04</span>Motion &amp; Audiovisual
+                  </button>
+                </h4>
+                <div
+                  id="cap-4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#capabilities"
+                >
+                  <div class="accordion-body">
+                    <ul class="tag-list">
+                      <li>Audiovisual content production</li>
+                      <li>Motion graphics</li>
+                      <li>After Effects</li>
+                      <li>Immersive 3D content</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h4 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cap-5"
+                    aria-expanded="false"
+                    aria-controls="cap-5"
+                  >
+                    <span class="cap-num">05</span>Tools &amp; Collaboration
+                  </button>
+                </h4>
+                <div
+                  id="cap-5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#capabilities"
+                >
+                  <div class="accordion-body">
+                    <ul class="tag-list">
+                      <li>Figma</li>
+                      <li>After Effects</li>
+                      <li>VS Code</li>
+                      <li>Git &amp; GitHub</li>
+                      <li>End-to-end creative project management</li>
+                      <li>Supplier coordination</li>
+                      <li>Mentoring junior designers</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience & education -->
+          <div class="row g-4 g-lg-5 subsection">
+            <div class="col-12 col-lg-7">
+              <h3 class="subsection-title">Experience</h3>
+              <ol class="timeline">
+                <li class="timeline__item reveal">
+                  <p class="timeline__date">2025 — Present</p>
+                  <div>
+                    <h4 class="timeline__role">
+                      Brand &amp; Graphic Designer / Brand Design Lead
+                    </h4>
+                    <p class="timeline__org">Auxadi</p>
+                    <p class="timeline__desc">
+                      Corporate visual identity and brand guidelines across
+                      digital and offline channels; websites, intranet,
+                      advertising, events and audiovisual content. UX prototypes
+                      for an internal reservation platform with the development
+                      team. Coordination and mentoring of junior team members.
+                    </p>
+                  </div>
+                </li>
+                <li class="timeline__item reveal">
+                  <p class="timeline__date">2022 — 2024</p>
+                  <div>
+                    <h4 class="timeline__role">
+                      Graphic Designer &amp; Marketing Assistant
+                    </h4>
+                    <p class="timeline__org">Elzaburu</p>
+                    <p class="timeline__desc">
+                      Corporate identity and brand guidelines; editorial design,
+                      publications, infographics and corporate iconography;
+                      website, social media, email marketing and audiovisual
+                      production.
+                    </p>
+                  </div>
+                </li>
+                <li class="timeline__item reveal">
+                  <p class="timeline__date">2021</p>
+                  <div>
+                    <h4 class="timeline__role">
+                      Interior &amp; Graphic Design Intern
+                    </h4>
+                    <p class="timeline__org">ALE Estudio</p>
+                    <p class="timeline__desc">
+                      Graphic proposals, spatial design, plans and
+                      product-design solutions.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="col-12 col-lg-4 offset-lg-1">
+              <h3 class="subsection-title">Education</h3>
+              <ol class="timeline timeline--compact">
+                <li class="timeline__item reveal">
+                  <p class="timeline__date">2026</p>
+                  <div>
+                    <h4 class="timeline__role">
+                      Full-Stack Web Development Bootcamp
+                    </h4>
+                    <p class="timeline__org">Neoland</p>
+                    <p class="timeline__desc">
+                      HTML, CSS, JavaScript and TypeScript, React and Next.js,
+                      Node.js and Express, SQL and MongoDB, Git and AI-assisted
+                      development.
+                    </p>
+                  </div>
+                </li>
+                <li class="timeline__item reveal">
+                  <p class="timeline__date">2015 — 2022</p>
+                  <div>
+                    <h4 class="timeline__role">
+                      Degree in Integral Design and Image Management
+                    </h4>
+                    <p class="timeline__org">Universidad Rey Juan Carlos</p>
+                    <p class="timeline__desc">
+                      Graphic, product and spatial design, brand strategy,
+                      communication, marketing and corporate image.
+                    </p>
+                  </div>
+                </li>
+                <li class="timeline__item reveal">
+                  <p class="timeline__date">Additional</p>
+                  <div>
+                    <h4 class="timeline__role">Further training</h4>
+                    <p class="timeline__desc">
+                      UX/UI and Figma, design systems, prototyping, motion
+                      graphics and After Effects, responsive web design, SEO and
+                      immersive 3D content.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+
+              <h3 class="subsection-title mt-5">Languages</h3>
+              <dl class="lang-list">
+                <div>
+                  <dt>Spanish</dt>
+                  <dd>Native</dd>
+                </div>
+                <div>
+                  <dt>English</dt>
+                  <dd>B2</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Contact ============ -->
+      <section
+        class="section section--contact"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container-xxl">
+          <header class="section-head">
+            <p class="eyebrow"><span>(03)</span> Contact</p>
+            <h2 class="section-title visually-hidden" id="contact-title">
+              Contact
+            </h2>
+          </header>
+
+          <p class="contact__lead reveal">
+            <span class="statement__thin"
+              >Have a project in mind, or looking for a multidisciplinary
+              designer with a growing frontend skill set?</span
+            >
+            <span class="statement__bold">Let’s talk.</span>
+          </p>
+
+          <a
+            class="contact__email reveal"
+            href="mailto:auroragbfl@gmail.com"
+            data-fit
+          >
+            auroragbfl@gmail.com<span class="contact__arrow" aria-hidden="true"
+              >↗</span
+            >
+          </a>
+
+          <div class="contact__rule">
+            <div class="row g-4 contact__details">
+              <div class="col-12 col-md-4">
+                <p class="eyebrow">Open to</p>
+                <p>
+                  Frontend development, UI engineering, UX/UI and digital
+                  product design roles, as well as interdisciplinary
+                  brand-and-digital projects.
+                </p>
+              </div>
+              <div class="col-6 col-md-4">
+                <p class="eyebrow">Elsewhere</p>
+                <p>
+                  <a
+                    class="text-link"
+                    href="https://www.linkedin.com/in/aurora-garcia-bermejo/"
+                    rel="noopener"
+                    target="_blank"
+                    >LinkedIn<span class="visually-hidden">
+                      (opens in a new tab)</span
+                    >
+                    ↗</a
+                  >
+                </p>
+              </div>
+              <div class="col-6 col-md-4">
+                <p class="eyebrow">Location</p>
+                <p>Madrid, Spain</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer class="site-footer">
+      <div class="container-xxl">
+        <div class="site-footer__row">
+          <p>© <span id="year">2026</span> Aurora García Bermejo</p>
+          <p>Built with HTML, CSS, Bootstrap and JavaScript.</p>
+          <a class="text-link" href="#home">Back to top ↑</a>
+        </div>
+        <p class="footer-name" aria-hidden="true" data-fit>Aurora García</p>
+      </div>
+    </footer>
+
+    <!-- ============ Case studies (Bootstrap modals) ============ -->
+
+    <!-- Case 01 -->
+    <div
+      class="modal fade case"
+      id="case-01"
+      tabindex="-1"
+      aria-labelledby="case-01-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="case__bar">
+            <span class="case__count">01 / 05</span>
+            <button type="button" class="case__close" data-bs-dismiss="modal">
+              Close <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-xxl">
+              <p class="eyebrow">Brand identity · Auxadi · 2025–present</p>
+              <h2 class="case__title" id="case-01-title">
+                Corporate Visual Identity System
+              </h2>
+
+              <div class="case__gallery">
+                <figure class="case__fig case__fig--wide">
+                  <img
+                    src="https://images.unsplash.com/photo-1658863025658-4a259cc68fc9?auto=format&amp;fit=crop&amp;q=75&amp;w=1600&amp;h=1000"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: design books and paper brochure samples arranged on a white surface."
+                  />
+                  <figcaption>
+                    Placeholder image — 2H Media / Unsplash
+                  </figcaption>
+                </figure>
+                <figure class="case__fig">
+                  <img
+                    src="https://images.unsplash.com/photo-1520764588094-8fc067746a8e?auto=format&amp;fit=crop&amp;q=75&amp;w=900&amp;h=1000"
+                    width="900"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: flat lay of blank white printed stationery."
+                  />
+                  <figcaption>
+                    Placeholder image — Ana Cruz / Unsplash
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="row g-4 g-lg-5 case__content">
+                <div class="col-12 col-lg-4">
+                  <dl class="case__meta">
+                    <div>
+                      <dt>Role</dt>
+                      <dd>Brand &amp; Graphic Designer / Brand Design Lead</dd>
+                    </div>
+                    <div>
+                      <dt>Context</dt>
+                      <dd>In-house brand team, Auxadi</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>2025–present</dd>
+                    </div>
+                    <div>
+                      <dt>Tools</dt>
+                      <dd><span class="todo">To confirm</span></dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="col-12 col-lg-7 offset-lg-1 case__text">
+                  <h3>Context &amp; objective</h3>
+                  <p>
+                    Keeping Auxadi’s corporate visual identity consistent across
+                    every digital and offline touchpoint, from the website and
+                    intranet to events, print and merchandising.
+                  </p>
+                  <h3>My role</h3>
+                  <p>
+                    I develop brand guidelines and visual identity systems,
+                    design corporate communications and manage creative projects
+                    end to end, including supplier coordination. I also
+                    coordinate and mentor junior team members.
+                  </p>
+                  <h3>Process</h3>
+                  <p>
+                    <span class="todo">Pending review</span> Describe how the
+                    system was defined or evolved: audit, principles,
+                    components, and how guidelines are shared with the team.
+                  </p>
+                  <h3>Deliverables</h3>
+                  <ul class="tag-list">
+                    <li>Brand guidelines</li>
+                    <li>Website &amp; intranet content</li>
+                    <li>Banners &amp; advertising</li>
+                    <li>Corporate communications</li>
+                    <li>Printed materials &amp; merchandising</li>
+                    <li>Audiovisual content</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="case__next">
+                <button
+                  type="button"
+                  class="case__next-btn"
+                  data-bs-target="#case-02"
+                  data-bs-toggle="modal"
+                >
+                  <span class="eyebrow">Next project</span>
+                  <span class="case__next-title">LATAM Days Madrid 2026 →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 02 -->
+    <div
+      class="modal fade case"
+      id="case-02"
+      tabindex="-1"
+      aria-labelledby="case-02-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="case__bar">
+            <span class="case__count">02 / 05</span>
+            <button type="button" class="case__close" data-bs-dismiss="modal">
+              Close <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-xxl">
+              <p class="eyebrow">Event identity &amp; communication · 2026</p>
+              <h2 class="case__title" id="case-02-title">
+                LATAM Days Madrid 2026
+              </h2>
+
+              <div class="case__gallery">
+                <figure class="case__fig case__fig--wide">
+                  <img
+                    src="https://images.unsplash.com/photo-1773828755374-0ee802d9f44b?auto=format&amp;fit=crop&amp;q=75&amp;w=1600&amp;h=1000"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: speaker presenting to a large audience in an auditorium."
+                  />
+                  <figcaption>
+                    Placeholder image — Marwen Larafa / Unsplash
+                  </figcaption>
+                </figure>
+                <figure class="case__fig">
+                  <img
+                    src="https://images.unsplash.com/photo-1769798643655-e0f10f62c3fd?auto=format&amp;fit=crop&amp;q=75&amp;w=900&amp;h=1000"
+                    width="900"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: audience watching a presentation on a large screen."
+                  />
+                  <figcaption>
+                    Placeholder image — Carlos Gil / Unsplash
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="row g-4 g-lg-5 case__content">
+                <div class="col-12 col-lg-4">
+                  <dl class="case__meta">
+                    <div>
+                      <dt>Role</dt>
+                      <dd><span class="todo">To confirm</span></dd>
+                    </div>
+                    <div>
+                      <dt>Context</dt>
+                      <dd>
+                        <span class="todo">To confirm</span> Organisation /
+                        client
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>2026</dd>
+                    </div>
+                    <div>
+                      <dt>Tools</dt>
+                      <dd><span class="todo">To confirm</span></dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="col-12 col-lg-7 offset-lg-1 case__text">
+                  <h3>Context &amp; objective</h3>
+                  <p>
+                    Event identity and communication materials for LATAM Days
+                    Madrid 2026.
+                  </p>
+                  <p>
+                    <span class="todo">Pending review</span> Add who organised
+                    the event, its audience and what the identity needed to
+                    communicate.
+                  </p>
+                  <h3>My role</h3>
+                  <p>
+                    <span class="todo">Pending review</span> Clarify which parts
+                    you designed personally and which were team contributions.
+                  </p>
+                  <h3>Process</h3>
+                  <p>
+                    <span class="todo">Pending review</span> Concept, visual
+                    system and how it was applied across formats.
+                  </p>
+                  <h3>Deliverables</h3>
+                  <p>
+                    <span class="todo">Pending review</span> e.g. event
+                    identity, signage, digital and printed communication.
+                  </p>
+                </div>
+              </div>
+
+              <div class="case__next">
+                <button
+                  type="button"
+                  class="case__next-btn"
+                  data-bs-target="#case-03"
+                  data-bs-toggle="modal"
+                >
+                  <span class="eyebrow">Next project</span>
+                  <span class="case__next-title"
+                    >Internal Reservation Platform →</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 03 -->
+    <div
+      class="modal fade case"
+      id="case-03"
+      tabindex="-1"
+      aria-labelledby="case-03-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="case__bar">
+            <span class="case__count">03 / 05</span>
+            <button type="button" class="case__close" data-bs-dismiss="modal">
+              Close <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-xxl">
+              <p class="eyebrow">UX prototyping · Auxadi · 2025–present</p>
+              <h2 class="case__title" id="case-03-title">
+                Internal Reservation Platform
+              </h2>
+
+              <div class="case__gallery">
+                <figure class="case__fig case__fig--wide">
+                  <img
+                    src="https://images.unsplash.com/photo-1790861286837-3580e5c91683?auto=format&amp;fit=crop&amp;q=75&amp;w=1600&amp;h=1000"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: hand-drawn website wireframes on dot-grid paper with a pencil."
+                  />
+                  <figcaption>
+                    Placeholder image — Vitalii Abakumov / Unsplash
+                  </figcaption>
+                </figure>
+                <figure class="case__fig">
+                  <img
+                    src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&amp;fit=crop&amp;q=75&amp;w=900&amp;h=1000"
+                    width="900"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: person sketching interface ideas on white paper."
+                  />
+                  <figcaption>
+                    Placeholder image — Kelly Sikkema / Unsplash
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="row g-4 g-lg-5 case__content">
+                <div class="col-12 col-lg-4">
+                  <dl class="case__meta">
+                    <div>
+                      <dt>Role</dt>
+                      <dd>
+                        UX prototypes, in collaboration with the development
+                        team
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Context</dt>
+                      <dd>Internal company-reservation platform, Auxadi</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>2025–present</dd>
+                    </div>
+                    <div>
+                      <dt>Tools</dt>
+                      <dd><span class="todo">To confirm</span></dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="col-12 col-lg-7 offset-lg-1 case__text">
+                  <h3>Context &amp; objective</h3>
+                  <p>
+                    Auxadi needed an internal tool for company reservations. I
+                    designed UX prototypes to define how the platform should
+                    work before and during development.
+                  </p>
+                  <h3>My role</h3>
+                  <p>
+                    I created the prototypes and worked with the development
+                    team, who were responsible for building the platform.
+                  </p>
+                  <h3>Process</h3>
+                  <p>
+                    <span class="todo">Pending review</span> Describe the main
+                    flows, how decisions were validated and how the prototypes
+                    were handed over to development.
+                  </p>
+                  <h3>Deliverables</h3>
+                  <ul class="tag-list">
+                    <li>UX prototypes</li>
+                    <li>
+                      <span class="todo">To confirm</span> user flows,
+                      wireframes, UI screens
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="case__next">
+                <button
+                  type="button"
+                  class="case__next-btn"
+                  data-bs-target="#case-04"
+                  data-bs-toggle="modal"
+                >
+                  <span class="eyebrow">Next project</span>
+                  <span class="case__next-title"
+                    >Editorial Design &amp; Infographics →</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 04 -->
+    <div
+      class="modal fade case"
+      id="case-04"
+      tabindex="-1"
+      aria-labelledby="case-04-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="case__bar">
+            <span class="case__count">04 / 05</span>
+            <button type="button" class="case__close" data-bs-dismiss="modal">
+              Close <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-xxl">
+              <p class="eyebrow">Editorial · Elzaburu · 2022–2024</p>
+              <h2 class="case__title" id="case-04-title">
+                Editorial Design &amp; Infographics
+              </h2>
+
+              <div class="case__gallery">
+                <figure class="case__fig case__fig--wide">
+                  <img
+                    src="https://images.unsplash.com/photo-1579366877909-40560cf603e2?auto=format&amp;fit=crop&amp;q=75&amp;w=1600&amp;h=1000"
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: a pile of printed magazines on a table."
+                  />
+                  <figcaption>
+                    Placeholder image — Keriliwi / Unsplash
+                  </figcaption>
+                </figure>
+                <figure class="case__fig">
+                  <img
+                    src="https://images.unsplash.com/photo-1635621456241-16e4a3a009a0?auto=format&amp;fit=crop&amp;q=75&amp;w=900&amp;h=1000"
+                    width="900"
+                    height="1000"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: open book showing a photograph of a chair."
+                  />
+                  <figcaption>
+                    Placeholder image — Saturday Books / Unsplash
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="row g-4 g-lg-5 case__content">
+                <div class="col-12 col-lg-4">
+                  <dl class="case__meta">
+                    <div>
+                      <dt>Role</dt>
+                      <dd>Graphic Designer &amp; Marketing Assistant</dd>
+                    </div>
+                    <div>
+                      <dt>Context</dt>
+                      <dd>Elzaburu</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>2022–2024</dd>
+                    </div>
+                    <div>
+                      <dt>Tools</dt>
+                      <dd><span class="todo">To confirm</span></dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="col-12 col-lg-7 offset-lg-1 case__text">
+                  <h3>Context &amp; objective</h3>
+                  <p>
+                    Turning corporate content into clear, consistent
+                    publications and visual explanations within Elzaburu’s
+                    visual identity.
+                  </p>
+                  <h3>My role</h3>
+                  <p>
+                    I worked on editorial design, publications, infographics and
+                    corporate iconography, alongside identity development, brand
+                    guidelines, web and social media content, email marketing
+                    and audiovisual production.
+                  </p>
+                  <h3>Process</h3>
+                  <p>
+                    <span class="todo">Pending review</span> Pick one or two
+                    publications and explain how the grid, hierarchy and
+                    iconography were defined.
+                  </p>
+                  <h3>Deliverables</h3>
+                  <ul class="tag-list">
+                    <li>Publications</li>
+                    <li>Infographics</li>
+                    <li>Corporate iconography</li>
+                    <li>Brand guidelines</li>
+                    <li>Email marketing</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="case__next">
+                <button
+                  type="button"
+                  class="case__next-btn"
+                  data-bs-target="#case-05"
+                  data-bs-toggle="modal"
+                >
+                  <span class="eyebrow">Next project</span>
+                  <span class="case__next-title">This Portfolio →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 05 -->
+    <div
+      class="modal fade case"
+      id="case-05"
+      tabindex="-1"
+      aria-labelledby="case-05-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="case__bar">
+            <span class="case__count">05 / 05</span>
+            <button type="button" class="case__close" data-bs-dismiss="modal">
+              Close <span aria-hidden="true">✕</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-xxl">
+              <p class="eyebrow">
+                Design &amp; frontend development · Personal · 2026
+              </p>
+              <h2 class="case__title" id="case-05-title">This Portfolio</h2>
+
+              <div class="case__gallery case__gallery--single">
+                <figure class="case__fig case__fig--wide">
+                  <img
+                    src="https://images.unsplash.com/photo-1555066931-bf19f8fd1085?auto=format&amp;fit=crop&amp;q=75&amp;w=1600&amp;h=900"
+                    width="1600"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Placeholder: laptop on a desk displaying lines of code."
+                  />
+                  <figcaption>
+                    Placeholder image — Arnold Francisca / Unsplash
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="row g-4 g-lg-5 case__content">
+                <div class="col-12 col-lg-4">
+                  <dl class="case__meta">
+                    <div>
+                      <dt>Role</dt>
+                      <dd>
+                        Art direction and design; development with an
+                        AI-assisted workflow
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Context</dt>
+                      <dd>Personal project</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>2026</dd>
+                    </div>
+                    <div>
+                      <dt>Stack</dt>
+                      <dd>
+                        HTML, CSS, JavaScript, Bootstrap 5.3, Git &amp; GitHub
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="col-12 col-lg-7 offset-lg-1 case__text">
+                  <h3>Context &amp; objective</h3>
+                  <p>
+                    A portfolio that connects my brand and visual design
+                    background with the way I now build interfaces, designed and
+                    coded as a single, coherent system.
+                  </p>
+                  <h3>Approach</h3>
+                  <p>
+                    An editorial art direction inspired by brand guidelines: an
+                    expanded variable typeface used across its full weight
+                    range, one accent colour, visible grid lines and numbered
+                    sections. The site is a static, single-page build with
+                    semantic HTML, custom CSS on top of Bootstrap’s grid and
+                    components, and a small amount of vanilla JavaScript.
+                  </p>
+                  <p>
+                    Designed by me, developed with an AI-assisted workflow: I
+                    defined the art direction, content and requirements, and
+                    reviewed and tested the code, an approach I practised
+                    throughout the Neoland bootcamp.
+                  </p>
+                  <h3>Details</h3>
+                  <ul class="tag-list">
+                    <li>Light &amp; dark mode</li>
+                    <li>Keyboard navigation</li>
+                    <li>Reduced-motion support</li>
+                    <li>Colour contrast checked against WCAG AA</li>
+                    <li>Structured data &amp; Open Graph</li>
+                    <li>Responsive from 320&nbsp;px</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="case__next">
+                <button
+                  type="button"
+                  class="case__next-btn"
+                  data-bs-target="#case-01"
+                  data-bs-toggle="modal"
+                >
+                  <span class="eyebrow">Back to first project</span>
+                  <span class="case__next-title"
+                    >Corporate Visual Identity System →</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
